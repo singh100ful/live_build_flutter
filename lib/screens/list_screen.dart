@@ -3,6 +3,7 @@ import 'package:live_build/models/post.dart';
 import 'package:live_build/screens/add_post_screen.dart';
 import 'package:live_build/screens/post_screen.dart';
 import 'package:live_build/services/post_service.dart';
+import 'package:live_build/widgets/atoms/progress_atom.dart';
 import 'package:live_build/widgets/molecules/post_molecule.dart';
 
 class ListScreen extends StatefulWidget {
@@ -64,9 +65,7 @@ class _ListScreenState extends State<ListScreen> {
               ),
             );
           }
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
+          return const ProgressAtom();
         },
       ),
       floatingActionButton: FloatingActionButton(

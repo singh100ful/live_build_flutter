@@ -55,7 +55,7 @@ class _AddPostSreenState extends State<AddPostSreen> {
                 },
               ),
               ElevatedButton(
-                onPressed: () {
+                onPressed: () async {
                   if (_formKey.currentState!.validate()) {
                     setState(() {
                       _futurePost = addPost(
@@ -63,6 +63,7 @@ class _AddPostSreenState extends State<AddPostSreen> {
                         body: _messageController.text,
                       );
                     });
+                    Navigator.pop(context);
                   }
                 },
                 child: const Text('Submit'),

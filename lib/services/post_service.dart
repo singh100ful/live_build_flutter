@@ -40,7 +40,6 @@ Future<Post> addPost({required String title, required String body}) async {
   );
 
   if (response.statusCode == 201) {
-    print(jsonDecode(response.body));
     return Post.fromJson(jsonDecode(response.body));
   } else {
     throw Exception('Failed to create post.');

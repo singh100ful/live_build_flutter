@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:live_build/models/comment.dart';
 import 'package:live_build/models/post.dart';
 import 'package:live_build/services/post_service.dart';
+import 'package:live_build/widgets/atoms/progress_atom.dart';
 import 'package:live_build/widgets/molecules/comment_molecule.dart';
 
 class PostScreen extends StatefulWidget {
@@ -78,9 +79,7 @@ class _PostScreenState extends State<PostScreen> {
                     ),
                   );
                 }
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
+                return const ProgressAtom();
               },
             ),
           ],
